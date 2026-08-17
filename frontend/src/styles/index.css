@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    background-color: theme("colors.patina.DEFAULT");
+    color: white;
+  }
+  *:focus-visible {
+    outline: 2px solid theme("colors.patina.DEFAULT");
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brick text-white hover:bg-brick-dark;
+  }
+  .btn-secondary {
+    @apply btn bg-transparent text-ink ring-1 ring-inset ring-slate/20 hover:bg-slate/5;
+  }
+  .btn-quiet {
+    @apply btn bg-transparent text-slate-soft hover:text-ink;
+  }
+  .field-label {
+    @apply block text-sm font-medium text-ink mb-1.5;
+  }
+  .field-input {
+    @apply w-full rounded-md border border-slate/25 bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-slate-soft/60 focus:border-patina focus:ring-1 focus:ring-patina outline-none transition-colors;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm text-brick-dark;
+  }
+  .card {
+    @apply rounded-xl bg-card shadow-card;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
