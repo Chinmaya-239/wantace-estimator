@@ -14,13 +14,11 @@ Built for the Wantace SDE Intern take-home assignment.
 
 | Surface | URL |
 |---|---|
-| Public estimator | `TODO: paste your Vercel/Netlify URL here` |
-| Owner panel | `TODO: paste your Vercel/Netlify URL here`/admin/login |
-| API | `TODO: paste your Render/Railway URL here` |
+| Public estimator | `https://northline-estimator.vercel.app` |
+| Owner panel | `https://northline-estimator.vercel.app`/admin/login |
+| API | `https://northline-estimator-api.onrender.com` |
 
-**Owner panel test credentials:** `admin` / `roofing2026!`
-(set via `ADMIN_USERNAME` / `ADMIN_PASSWORD` — change these before you
-deploy anywhere public, see [Environment variables](#environment-variables)).
+**Owner panel login:** set via the `ADMIN_USERNAME` / `ADMIN_PASSWORD` environment variables (see [Environment variables](#environment-variables)).
 
 ## How it's built
 
